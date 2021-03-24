@@ -34,7 +34,7 @@ public class MathUtility {
             return 1;
         
         //CPU chạy đến đây sure n = 2..20
-        long result = 0; //cố tình heng để thấy đỏ
+        long result = 1; //cố tình heng để thấy đỏ
         for (int i = 2; i <= n; i++) 
             result *= i;
         
