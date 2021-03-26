@@ -24,6 +24,23 @@ public class MathUtility {
     //21! tràn long, bị sai nếu ráng lưu biến long
     //long: 10^18 18 con số 0
     
+//    public static long getFactiorial(int n)
+//    {
+//        if (n < 0 || n > 20)
+//            throw new IllegalArgumentException("Invalid argument. N must be between 0...20");
+//        
+//        //CPU chạy đến đây, sure n từ 0...20
+//        if(n == 0 || n == 1)
+//            return 1;
+//        
+//        //CPU chạy đến đây sure n = 2..20
+//        long result = 1; //cố tình heng để thấy đỏ
+//        for (int i = 2; i <= n; i++) 
+//            result *= i;
+//        
+//        return result;
+//    }
+    
     public static long getFactiorial(int n)
     {
         if (n < 0 || n > 20)
@@ -33,11 +50,8 @@ public class MathUtility {
         if(n == 0 || n == 1)
             return 1;
         
-        //CPU chạy đến đây sure n = 2..20
-        long result = 1; //cố tình heng để thấy đỏ
-        for (int i = 2; i <= n; i++) 
-            result *= i;
+        return n * getFactiorial(n - 1); //xong đệ quy
         
-        return result;
+        // n! = n * (n - 1)!
     }
 }
